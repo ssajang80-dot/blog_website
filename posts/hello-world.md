@@ -18,3 +18,40 @@ tags: ["시작", "Flask", "블로그"]
 ```python
 def hello():
     return "Hello, Blog!"
+
+
+---
+
+## 📄 `templates/base.html`
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}My Blog{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">✦ My Blog</a>
+      <div class="nav-links">
+        <a href="/">글 목록</a>
+        <a href="/about">소개</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2026 My Blog · Flask + Vercel</p>
+  </footer>
+</body>
+</html>
