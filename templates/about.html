@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}소개 - My Blog{% endblock %}
+
+{% block content %}
+<section class="about">
+  <h1>소개</h1>
+  <p>안녕하세요! 이 블로그는 Flask와 Vercel로 만들어졌습니다.</p>
+  <p>마크다운 파일을 <code>posts/</code> 폴더에 추가하면 자동으로 글이 등록됩니다.</p>
+
+  <h2>기술 스택</h2>
+  <ul>
+    <li>🐍 Python + Flask</li>
+    <li>▲ Vercel (배포)</li>
+    <li>📝 Markdown (글 작성)</li>
+  </ul>
+</section>
+{% endblock %}
